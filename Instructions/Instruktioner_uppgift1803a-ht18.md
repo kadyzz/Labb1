@@ -35,9 +35,9 @@ Ha genomfört följande moment enligt denna handledning:
 2. Starta Atmel Studio, modifiera källkoden i projektet, kompilera och ladda ner den till utvecklingskortet. Modifiera och köra programmet tills alla tester passeras.
 3. Kontrollera att programmet som helhel fungerar som det är tänkt.
 4. Göra mätningar av exekveringstid och jämföra med drivern i ASF. Dessa mätningar redovisas i separat labrapport på Canvas (använd tillhandahållen mall).
-5. "Committa" filerna till ditt personliga repo, synka med github, och göra en ”pull request” till det centrala kursrepot.
+5. "Committa" filerna till ditt personliga git repo och pusha era filer till ert repo på github classroom.
 
-Läraren kommer att kolla alla pull requests efter deadline som anges på Canvas, efter uppsamlingslabbarna vid terminens slut och vid kursens slut. **Inga laborationer kommer att bedömmas utanför kursen!**
+Läraren kommer att kolla alla era filer veckan efter laborationen och vid uppsamlingslabbarna vid kursens slut. **Inga laborationer kommer att bedömmas utanför kursen!**
 
 Förberedelser
 ------
@@ -50,7 +50,7 @@ Förberedelser
     4. Känna till hur pinnarna på Arduino Due förhåller sig till utgångarna på SAM3X8E [4]
     5. Hur man skapar större projekt med flera filer (sektion 5 i [1]).
     6. Tester för C-funktioner [6]
-2. Det finns ett diagnostiskt test på Canvas. Gör det innan du går till labbsalen som en koll på att du kan grunderna! Du kommer inte att bli godkänd på labben utan att ha fått godkänt på testet (allt rätt).
+2. Det finns ett diagnostiskt test på Canvas. Gör det innan du går till labbsalen som en koll på att du kan grunderna!
 3. Läs igenom grunderna i versionshantering med git, t.ex. denna självstudiekurs: <http://try.github.io/levels/1/challenges/1> eller ännu hellre Philips och Arons skrift "Komma i gång med Git" <https://paper.dropbox.com/doc/Komma-igang-med-Git-Ss9pacvHCiwTXGkX7XFJc>. Om du läser och följer den är du väl rustad både för det som behövs av Git i denna kurs men också i kurserna längre fram.
 4. Du skall också ha läst igenom hela denna handledning innan du går till labbsalen!
 
@@ -63,7 +63,6 @@ Förberedelser
     2. Bossac flashprogrammeringsdriver, inklusive DOS-macro (finns när du laddat ner uppgiftens repo från Github). Instruktioner finns i Appendix.
     3. En Git-klient, lämpligen git-clienten som finns installerad i er Cygwin-miljö. 
 2. Alla studenter i labbgruppen måste också ha registrerat en användare på [github](http://www.github.com/)! Om du redan har en, använd den!
-__Meddela Johan på _johan.holmgren@mau.se_ vilken din githubanvändare är.__
 
 **Gör det här innan ni kommer till labbsalen, ödsla inte tiden ni sitter där på saker ni kan göra hemma!**
 
@@ -74,23 +73,22 @@ Själva uppgiften
 
 ### 1: Skapa ett personligt repo för denna programmeringsuppgift med hjälp av Git
 
-Det första ni behöver göra är att skapa ett git-repository för den här  uppgiften, vilket ni gör genom att följa den för uppgift 1803a, som finns publicerad på kursens hemsida på Canvas. När ni följer denna länk skapas automatiskt ert repository för uppgiften på Github. 
+Det första ni behöver göra är att skapa ett git-repository för den här  uppgiften, vilket ni gör genom att följa den länk för uppgift 1803a som finns publicerad på kursens hemsida på Canvas. När ni följer denna länk skapas automatiskt ert repository för uppgiften på Github.  
 
-För en introduktion till Git, se dokumentet _DA267A - laboratory environment_,som ni också hittar på Canvas. Ni finner också en introduktion till Git på följande länk: <https://paper.dropbox.com/doc/Komma-igang-med-Git-Ss9pacvHCiwTXGkX7XFJc>
+För en introduktion till Git, inklusive hur man skapar ett "team" med två studenter, se dokumentet _DA267A - laboratory environment_, som ni också hittar på Canvas. Ni finner också en introduktion till Git på följande länk: <https://paper.dropbox.com/doc/Komma-igang-med-Git-Ss9pacvHCiwTXGkX7XFJc>.
 
 För att kunna klona det nyskapade repositoriet till er lokala dator använder ni den address som syns i web-läsaren då ni navigerat till ert repository med hjälp av en webbrowser. 
 
 
 
-__SPECA HUR GIT_REPOT SER UT__ 
 
 
 
 
 #### Arbetskatalogen för denna uppgiften
 
-I katalogen `Task1501a` finns denna handledning i mappen `Instructions` och en projektmapp för Atmel studio vid namn `ProjectDigitalIO`
-![](https://github.com/tstoan/Task1501a/blob/master/Instruction/cloneAddress.png)
+I arbetskatalogen för denna uppgiften finner denna labinstruktion i mappen `Instructions` och en projektmapp för Atmel studio vid namn `ProjectDigitalIO`.
+
 
 
 
@@ -108,7 +106,7 @@ Due-kortet kan drivas med strömmen genom en USB-kabel från datorn om man inte 
 
 ### 3: Labbens programmeringsuppgift
 
-I det klonade git-repot finner ni i katalogen `Task1501a\ProjectDigitalIO`  en projektfil för Atmel Studio:  `ProjectDigitalIO.atsln` (.atsln står för "atmel solution". En solution kan bestå av flera samhörande projekt men i kursen har vi bara ett projekt per solution)  
+I det klonade git-repot finner ni i katalogen `ProjectDigitalIO`  en projektfil för Atmel Studio:  `ProjectDigitalIO.atsln` (.atsln står för "atmel solution". En solution kan bestå av flera samhörande projekt men i kursen har vi bara ett projekt per solution)  
 Öppna den genom att använda ”open project” inifrån Atmel Studio. I fönstret till höger ser du de kataloger och filer som ingår i projektet. Det är första hand filerna som finns i katalogen src (source) som är intressanta.
 
 I labben skall du skriva funktioner som passerar de testfall som finns definierade i projektet.  
@@ -285,16 +283,13 @@ Följ anvisningarna i word-dokumentet "Mätningar - uppgift 1803a-ht18".
 
 5: Ladda upp arbetet på github respektive Canvas för bedömning
 ------
-När ni är klara med er uppgift skall ni pusha alla ändringar till uppgiftens repository på Github, enligt instruktion i dokumentet _DA267A - laboratory environment_.
+När ni är klara med er uppgift skall ni pusha alla ändringar till ert  repository på Github, enligt instruktion i dokumentet _DA267A - laboratory environment_. En viktig sak som måste göras är att lägga till eventuella nya filer till ditt repo (som `testResultat.txt`). 
+Har du kommit så långt har du ett uppdaterat repo som du kan se på githubs webbsida. 
+
+Rapporten med mätningar och bilder gör du om till pdf och lämnar in via uppgiftens inlämningssida på canvas. Vänligen lämnna inte in er rapport via Canvas förrän ni lämnat in era färdiga kod via Github. Läraren kommer nämligen att titta både på kod och rapport när rapporten är inlämnad. 
 
 
-En viktig sak som måste göras är att lägga till eventuella nya filer till ditt repo (som `testResultat.txt`). 
-Har du kommit så långt har du ett uppdaterat repo som du kan se på githubs webbsida. Nu ska du skicka in en begäran att ägaren till det gemensamma kursrepot ska titta på dina ändringar genom en pull request (steg 5 i Figur 3). Där anger du en rubrik (till exempel att du är klar med en viss uppgift), och fyller i en beskrivning av vad dina ändringar består av.
-Glöm inte att ange namnen alla som bidragit med att göra klart uppgiften! Det går inte att komma i efterhand och påstå att du varit med om ditt namn inte finns med på originalinlämningen! I så fall får du göra en egen pull request efteråt.
-
-Rapporten med mätningar och bilder gör du om till pdf och lämnar in på Canvas uppgiftens inlämningssida på .
-
-Läraren kommer att titta på alla som har lämnat in till onsdag kväll veckan efter den schemalagda handledningen. Om du lämnar in senare kommer de att bedömas vid terminens slut i samband med tentan.
+Läraren kommer att titta på alla som har lämnat in till onsdag kväll veckan efter den schemalagda handledningen. Om du lämnar in senare kommer inlämningen att bedömas i samband med tentan vid kursens slut.
 
 Referenser
 ======
