@@ -1,8 +1,3 @@
-<Todo>
-<Uppdatera text om Diagnotiskt test>
-<Uppdatera text om hur de skickar in uppgifter>
-<Uppdatera got-instruktioner>
-
 Instruktioner - uppgift 1803a-ht18
 ======
 _Ulrik Eklund, 2015-11-11_  
